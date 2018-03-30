@@ -17,6 +17,7 @@
 #include "PrecompiledHeader.h"
 #include "IopCommon.h"
 #include "App.h" // For host irx injection hack
+#include "TOMBHook.h"
 
 using namespace R3000A;
 
@@ -153,7 +154,8 @@ static void doBranch(s32 tar) {
 	execI();
 	PSXCPU_LOG( "\n" );
 	iopIsDelaySlot = false;
-	psxRegs.pc = branchPC;
+
+	HandleBranch(branchPC);
 
 	iopEventTest();
 }
