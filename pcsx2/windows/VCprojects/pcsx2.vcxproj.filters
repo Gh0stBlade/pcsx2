@@ -871,6 +871,9 @@
     <ClCompile Include="..\..\ps2\Iop\PsxBios.cpp">
       <Filter>System\Ps2\Iop</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\TOMBHook.cpp">
+      <Filter>System\Ps2\Iop</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Patch.h">
@@ -1309,6 +1312,9 @@
       <Filter>System\Ps2</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Mdec.h">
+      <Filter>System\Ps2\Iop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\TOMBHook.h">
       <Filter>System\Ps2\Iop</Filter>
     </ClInclude>
   </ItemGroup>

@@ -12,7 +12,8 @@ using namespace R3000A;
 enum GP
 {
 	TOMB4 = 0xA51E4,
-	TOMB5 = 0xA05B4
+	TOMB5 = 0xA05B4,
+	TOMB5_DECOMP = 0x62424
 };
 
 /*
@@ -80,7 +81,7 @@ bool HandleTOMB5(u32& branchPC)
 		psxRegs.pc = psxRegs.GPR.n.ra;
 		return true;
 	}
-	else if (/*branchPC == 0x78530*/ || branchPC == 0x68AE0)
+	else if (/*branchPC == 0x78530 ||*/ branchPC == 0x68AE0)
 	{
 		PClSeek((FILE*)psxRegs.GPR.n.a0, psxRegs.GPR.n.a1, psxRegs.GPR.n.a2, psxRegs.GPR.n.v0);
 		psxRegs.pc = psxRegs.GPR.n.ra;
@@ -93,6 +94,36 @@ bool HandleTOMB5(u32& branchPC)
 		return true;
 	}
 	else if (branchPC == 0x785A8 || branchPC == 0x6BB00)
+	{
+		PCRead((FILE*)psxRegs.GPR.n.a0, psxRegs.GPR.n.a1, psxRegs.GPR.n.a2, psxRegs.GPR.n.v0);
+		psxRegs.pc = psxRegs.GPR.n.ra;
+		return true;
+	}
+
+	return false;
+}
+
+bool HandleTOMB5Decomp(u32& branchPC)
+{
+	if (branchPC == 0x4D4F4 /*|| branchPC == 0x68AC0*/)
+	{
+		PCOpen(iopMemReadString(psxRegs.GPR.n.a0), psxRegs.GPR.n.a1, psxRegs.GPR.n.v0);
+		psxRegs.pc = psxRegs.GPR.n.ra;
+		return true;
+	}
+	else if (/*branchPC == 0x78530 ||*/ branchPC == 0x4D524)
+	{
+		PClSeek((FILE*)psxRegs.GPR.n.a0, psxRegs.GPR.n.a1, psxRegs.GPR.n.a2, psxRegs.GPR.n.v0);
+		psxRegs.pc = psxRegs.GPR.n.ra;
+		return true;
+	}
+	else if (branchPC == 0x4D514 /*|| branchPC == 0x68B04*/)
+	{
+		PCClose((FILE*)psxRegs.GPR.n.a0, psxRegs.GPR.n.v0);
+		psxRegs.pc = psxRegs.GPR.n.ra;
+		return true;
+	}
+	else if (branchPC == 0x4D6D8 /*|| branchPC == 0x6BB00*/)
 	{
 		PCRead((FILE*)psxRegs.GPR.n.a0, psxRegs.GPR.n.a1, psxRegs.GPR.n.a2, psxRegs.GPR.n.v0);
 		psxRegs.pc = psxRegs.GPR.n.ra;
@@ -145,6 +176,10 @@ void HandleBranch(u32& branchPC)
 	break;
 	case GP::TOMB5:
 		if (HandleTOMB5(branchPC))
+			return;
+		break;
+	case GP::TOMB5_DECOMP:
+		if (HandleTOMB5Decomp(branchPC))
 			return;
 		break;
 	}

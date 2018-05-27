@@ -17,6 +17,7 @@
 #define __R3000A_H__
 
 #include <stdio.h>
+#include "Pcsx2Defs.h"
 
 union GPRRegs {
 	struct {
