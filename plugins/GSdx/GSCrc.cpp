@@ -132,6 +132,7 @@ CRC::Game CRC::m_games[] =
 	{0xB049DD5E, OnePieceGrandBattle, US, 0},
 	{0x5D02CC5B, OnePieceGrandBattle, NoRegion, 0},
 	{0x6F8545DB, ICO, US, 0},
+	{0x48CDF317, ICO, US, 0}, // Demo
 	{0xB01A4C95, ICO, JP, 0},
 	{0x2DF2C1EA, ICO, KO, 0},
 	{0x5C991F4E, ICO, EU, 0},
@@ -225,8 +226,10 @@ CRC::Game CRC::m_games[] =
 	{0x5D482F18, JackieChanAdv, EU, 0},
 	{0xAC4DFD5A, JackieChanAdv, EU, 0},
 	{0x95CC86EF, GiTS, US, 0}, // same CRC also reported as EU
+	{0x2C5BF134, GiTS, US, 0}, // Demo
 	{0xA5768F53, GiTS, JP, 0},
 	{0xA3643EB1, GiTS, KO, 0},
+	{0x28557423, GiTS, RU, 0},
 	{0xBF6F101F, GiTS, EU, 0}, // same CRC as another US disc
 	{0x6BF11378, Onimusha3, US, 0},
 	{0x71320CA8, Onimusha3, JP, 0},
@@ -286,6 +289,7 @@ CRC::Game CRC::m_games[] =
 	{0xA33AF77A, TenchuFS, US, 0},
 	{0x64C58FB4, TenchuFS, US, 0},
 	{0xE7CCCB1E, TenchuFS, EU, 0},
+	{0x89E63B6B, TenchuFS, RU, 0}, // Beta
 	{0x1969B19A, TenchuFS, ES, 0}, // PAL Spanish
 	{0xBF0DC4CE, TenchuFS, DE, 0},
 	{0x696BBEC3, TenchuFS, KO, 0},
@@ -300,6 +304,7 @@ CRC::Game CRC::m_games[] =
 	{0x8BC95883, Sly3, US, 0},
 	{0x3130A4D3, Sly3, US, 0}, // E3 Demo
 	{0x35CCFA60, Sly3, US, 0}, // Regular Demo
+	{0x8C146034, Sly3, EU, 0}, // Demo
 	{0x8164C614, Sly3, EU, 0},
 	{0xA8CC1583, Sly3, KO, 0},
 	{0x518DD841, Sly2, KO, 0},
@@ -359,6 +364,7 @@ CRC::Game CRC::m_games[] =
 	{0xB1995E29, ShadowofRome, EU, 0}, // cutie comment
 	{0x958DCA28, ShadowofRome, EU, 0},
 	{0x57818AF6, ShadowofRome, US, 0},
+	{0x1E210E60, ShadowofRome, US, 0}, // Demo
 	{0xF21EE6E0, CrashNburn, US, 0},
 	{0x54A548B4, CrashNburn, EU, 0},
 	{0x694A998E, TombRaiderUnderworld, JP, 0}, // cutie comment
@@ -370,8 +376,6 @@ CRC::Game CRC::m_games[] =
 	{0xBC8B3F50, TombRaiderLegend, US, 0}, // cutie comment
 	{0x365172A0, TombRaiderLegend, JP, 0},
 	{0x05177ECE, TombRaiderLegend, EU, 0},
-	{0x08FFF00D, SSX3, JP, 0}, // cutie comment
-	{0xCE942B2A, SSX3, EU, 0},
 	{0x5C891FF1, Black, US, 0},
 	{0xCAA04879, Black, EU, 0},
 	{0xADDFF505, Black, EU, 0},
@@ -419,6 +423,7 @@ CRC::Game CRC::m_games[] =
 	{0x9B89F425, NanoBreaker, EU, 0},
 	{0x519E816B, Kunoichi, US, 0}, // Nightshade
 	{0x3FB419FD, Kunoichi, JP, 0},
+	{0x2919744A, Kunoichi, RU, 0}, // Nightshade
 	{0x086D198E, Kunoichi, CH, 0},
 	{0x3B470BBD, Kunoichi, EU, 0},
 	{0x6BA65DD8, Kunoichi, KO, 0},
@@ -448,6 +453,8 @@ CRC::Game CRC::m_games[] =
 	{0xE21404E2, GetaWay, US, 0},
 	{0x458485EF, GetaWay, EU, 0},
 	{0xE78971DF, GetaWayBlackMonday, US, 0},
+	{0x342D97FA, GetaWayBlackMonday, US, 0}, // Demo
+	{0xE8C0AD1A, GetaWayBlackMonday, JP, 0},
 	{0x09C3DF79, GetaWayBlackMonday, EU, 0},
 	{0x1130BF23, SakuraTaisen, CH, 0}, // cutie comment
 	{0x4FAE8B83, SakuraTaisen, KO, 0},
@@ -482,6 +489,7 @@ CRC::Game CRC::m_games[] =
 	{0x86C57952, SoulCalibur2, JP, 0},
 	{0x83AFB38A, SoulCalibur2, KO, 0},
 	{0xE1B01308, SoulCalibur2, US, 0},
+	{0x4B66F38C, SoulCalibur2, US, 0}, // Demo
 	{0x632A5116, SoulCalibur2, EU, 0},
 	{0xFB8554A0, SoulCalibur3, JP, 0},
 	{0x7C7B9E71, SoulCalibur3, JP, 0},
@@ -492,6 +500,7 @@ CRC::Game CRC::m_games[] =
 	{0x37B99B14, SoulCalibur3, KO, 0},
 	{0xFC0F8A5B, Simple2000Vol114, JP, 0},
 	{0xBDD9BAAD, UrbanReign, US, 0}, // cutie comment
+	{0x0418486E, UrbanReign, RU, 0},
 	{0xAE4BEBD3, UrbanReign, EU, 0},
 	{0x48AC09BC, SteambotChronicles, EU, 0},
 	{0x9F391882, SteambotChronicles, US, 0},
@@ -535,14 +544,20 @@ CRC::Game CRC::m_games[] =
 	{0x6D8B4CD1, SoulReaver2, EU, 0},
 	{0x728AB07C, LegacyOfKainDefiance, US, 0},
 	{0xBCAD1E8A, LegacyOfKainDefiance, EU, 0},
+	{0x28D09BF9, NicktoonsUnite, US, 0},
+	{0xF25266C4, NicktoonsUnite, EU, 0}, // Nickelodeon SpongeBob SquarePants And Friends Unite
 	{0xCE4933D0, RatchetAndClank, US, 0},
+	{0x6F191506, RatchetAndClank, US, 0}, // E3 Demo
+	{0x81CBFEA2, RatchetAndClank, US, 0}, // EB Games Demo
 	{0x56A35F77, RatchetAndClank, JP, 0},
 	{0x76F724A3, RatchetAndClank, EU, 0},
 	{0xB3A71D10, RatchetAndClank2, US, 0}, // Going Commando
 	{0x38996035, RatchetAndClank2, US, 0},
+	{0xDF6F94A1, RatchetAndClank2, US, 0}, // Demo - Going Commando & Jak II
 	{0x8CAA5F16, RatchetAndClank2, JP, 0}, // Gagaga! Ginga no Commando-ssu
 	{0x2F486E6F, RatchetAndClank2, EU, 0},
 	{0x45FE0CC4, RatchetAndClank3, US, 0}, // Up Your Arsenal
+	{0x2A12175A, RatchetAndClank3, US, 0}, // Regular Demo
 	{0x64DC6000, RatchetAndClank3, JP, 0}, // Totsugeki! Galactic Rangers
 	{0x17125698, RatchetAndClank3, EU, 0},
 	{0x9BFBCD42, RatchetAndClank4, US, 0}, // Deadlocked
